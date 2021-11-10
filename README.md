@@ -2,7 +2,7 @@
 
 ## 💻 Usage
 
-After cloning the repositody, run the development server:
+Run the development server:
 
 ```bash
 yarn

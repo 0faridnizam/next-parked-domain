@@ -24,12 +24,13 @@ const securityHeaders = [
 ];
 
 module.exports = withPWA({
+  target: serverless,
+  assetPrefix: isProd ? 'https://nom.nomcdn.xyz' : '',
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
   },
   reactStrictMode: true,
-  assetPrefix: isProd ? 'https://nom.nomcdn.xyz' : '',
   async headers() {
     return [
       {

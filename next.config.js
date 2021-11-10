@@ -1,5 +1,4 @@
 const withPWA = require('next-pwa');
-const isProd = process.env.NODE_ENV === 'production';
 const securityHeaders = [
   {
     key: 'Strict-Transport-Security',
@@ -24,8 +23,6 @@ const securityHeaders = [
 ];
 
 module.exports = withPWA({
-  target: serverless,
-  assetPrefix: isProd ? 'https://nom.nomcdn.xyz' : '',
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
